@@ -2,9 +2,9 @@ This website allows a user to select their pizza type: including size, toppings 
 
 Describe: ();
 
-Test: It should allow user to choose pizza toppings and pizza size.
-Input: 
-Expected Output: 
+Test: It should return an array of pizza toppings.
+Input: console.log(toppings)
+Expected Output: 'pineapple,' 'olive', 'jalapeño'
 
 Test: 
 Input: 
