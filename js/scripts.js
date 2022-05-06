@@ -1,16 +1,24 @@
 // Business Logic
-//function Pizza (toppings, size) {
-  //this.topping = topping;
-  //this.size = size;
-//}
-function selectPizza(toppings){
-  return toppings.map(function (pizza) {
-    pizza.type;
+function pizzaParty (toppings, size) {
+    this.toppings = toppings;
+    this.size = size;
+  }
+
+function selectPizza(toppings) {
+  return toppings.map(function (pizzaPie) {
+    pizzaPie.type;
   });
 }
 let toppings = [{type:'pineapple'}, {type: 'olive'}, {type: 'jalapeño'}];
 let type = selectPizza(toppings);
 
+function selectDimensions(size) {
+  return size.map(function (width) {
+  width.ofPie;
+  });
+}
+let size = [{type: 'small'}, {type: 'medium'}, {type: 'large'}];
+let ofPie = selectDimensions(size);
 
 
 //Pizza.prototype.selectPizza = function() {

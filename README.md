@@ -1,14 +1,14 @@
 This website allows a user to select their pizza type: including size, toppings and cost. Once selected it will return the total cost of their selection based on which combination they chose. 
 
-Describe: ();
+Describe: (selectPizza);
 
 Test: It should return an array of pizza toppings.
 Input: console.log(toppings)
 Expected Output: 'pineapple,' 'olive', 'jalapeño'
 
-Test: 
-Input: 
- Expected Output: 
+Test: It should return an array of pizza size options.
+Input: console.log(size)
+ Expected Output: 'small', 'medium', 'jalepeno'
 
 Test:  
 Input:  
