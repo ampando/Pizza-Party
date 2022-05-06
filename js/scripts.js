@@ -20,6 +20,24 @@ function selectDimensions(size) {
 let size = [{type: 'small'}, {type: 'medium'}, {type: 'large'}];
 let ofPie = selectDimensions(size);
 
+pizzaParty.prototype.cost = function() {
+  if(this.selectPizza() === this.pizzaPie() && small) {
+    return 10;
+  } else if (this.selectPizza() === this.pizzaPie() && medium) {
+    return 15;
+  } else if (this.selectPizza() === this.pizzaPie() && large) {
+    return 20;
+  }
+};
+
+//User Interface Logic
+$(document).ready(function(){
+  $("#form-one").submit(function(event){
+    event.preventDefault();
+  const 
+  }
+}
+
 
 //Pizza.prototype.selectPizza = function() {
   //if (this.selectPizza = pineapple,["small" || "medium" || "large"]) {
