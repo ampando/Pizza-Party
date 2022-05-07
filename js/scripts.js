@@ -1,8 +1,10 @@
 // Business Logic
-function pizzaParty(toppings, size) {
+function Pizza() {
+  this.pizzaParty = {};
+}
+function PizzaParty(toppings, size,) {
     this.toppings = toppings;
-    this.size = size;
-    this.cost = 0 
+    this.size = size; 
   };
 
 function selectPizza(toppings) {
@@ -22,7 +24,7 @@ function selectDimensions(size) {
 let size = [{type: 'small'}, {type: 'medium'}, {type: 'large'}];
 let ofPie = selectDimensions(size);
 
-pizzaParty.prototype.cost = function() {
+/*pizzaParty.prototype.sizeCost = function() {
   if(this.size === small) {
     this.cost += 10;
   } else if (this.size === medium) {
@@ -31,23 +33,37 @@ pizzaParty.prototype.cost = function() {
     this.cost += 20;
   }
   return this.cost;
+};*/
+
+pizzaParty.prototype.pizzaCost = function() {
+  if(this.sizeCost() === "pineapple" && small) {
+    return 10;
+  } else if (this.sizeCost() === "olive" && medium) {
+    return 15;
+  } else if (this.sizeCost() === "jalapeño" && large) {
+    return 20;
+  }
 };
 
 //User Interface Logic
 
-$(document).ready(function() {
+/*$(document).ready(function() {
   $("#formOne").submit(function(event){
     event.preventDefault();
   const size = $("input:radio[name=size]:checked").val;
   const toppings = $("input:radio[name=toppings]:checked").val;
-  const result = pizzaParty(toppings + " ", size);
-  alert(result); 
-  
-  //const pizza = new Pizza(toppings, size);
-  //pizza.getPrice();
-  //const sizeCost = functionVariable 
-
-  //$("h4").html(sizeCost);
-  //$("#result").show();
   });
-})
+});*/
+  //const pizza = new Pizza(toppings, size);
+  
+  const form = document.getElementById("form");
+  form.addEventListener("submit",(e) => {
+    e.preventDefault();
+  });
+  
+  /*$(document).ready(function() {
+  $(".form").submit(function(event) {
+    event.preventDefault();
+    $("#displayTotal").show();
+    });
+  });*/

@@ -8,15 +8,12 @@ Expected Output: 'pineapple,' 'olive', 'jalapeño'
 
 Test: It should return an array of pizza size options.
 Input: console.log(size)
- Expected Output: 'small', 'medium', 'jalepeno'
+ Expected Output: 'small', 'medium', 'large'
 
 Test:  It should return the cost of pizza depending on user selection.
 Input: 
 Expected Output: 
 
-Test: 
-Input:
-Expected Output: 
 
 SETUP and INSTALLATION REQUIREMENTS
 
@@ -44,9 +41,10 @@ Open in Visual Studio code using 'code .' command
 Open index.html in Chrome or preferred browser: 'open index.html
 
 Known Bugs
-No Known Bugs
+Unable to return cost value with submit button. 
 
-License
+License:
+MIT
 
 Support and Contact Details:
 
