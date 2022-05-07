@@ -10,8 +10,8 @@ Test: It should return an array of pizza size options.
 Input: console.log(size)
  Expected Output: 'small', 'medium', 'jalepeno'
 
-Test:  
-Input:  
+Test:  It should return the cost of pizza depending on user selection.
+Input: 
 Expected Output: 
 
 Test: 

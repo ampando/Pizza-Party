@@ -10,6 +10,7 @@ function selectPizza(toppings) {
     pizzaPie.type;
   });
 }
+
 let toppings = [{type:'pineapple'}, {type: 'olive'}, {type: 'jalapeño'}];
 let type = selectPizza(toppings);
 
@@ -33,16 +34,20 @@ pizzaParty.prototype.cost = function() {
 };
 
 //User Interface Logic
+
 $(document).ready(function() {
-  $(".form-one").submit(function(event){
+  $("#formOne").submit(function(event){
     event.preventDefault();
   const size = $("input:radio[name=size]:checked").val;
-  const toppings = [];
+  const toppings = $("input:radio[name=toppings]:checked").val;
+  const result = pizzaParty(toppings + " ", size);
+  alert(result); 
   
-  const pizza = new Pizza(toppings, size);
-  pizza.getPrice();
+  //const pizza = new Pizza(toppings, size);
+  //pizza.getPrice();
+  //const sizeCost = functionVariable 
 
-  $("h4").html(pizzaCost);
-  $("#displayTotal").show();
+  //$("h4").html(sizeCost);
+  //$("#result").show();
   });
 })
