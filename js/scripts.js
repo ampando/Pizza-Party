@@ -1,8 +1,9 @@
 // Business Logic
-function pizzaParty (toppings, size) {
+function pizzaParty(toppings, size) {
     this.toppings = toppings;
     this.size = size;
-  }
+    this.cost = 0 
+  };
 
 function selectPizza(toppings) {
   return toppings.map(function (pizzaPie) {
@@ -21,36 +22,27 @@ let size = [{type: 'small'}, {type: 'medium'}, {type: 'large'}];
 let ofPie = selectDimensions(size);
 
 pizzaParty.prototype.cost = function() {
-  if(this.selectPizza() === this.pizzaPie() && small) {
-    return 10;
-  } else if (this.selectPizza() === this.pizzaPie() && medium) {
-    return 15;
-  } else if (this.selectPizza() === this.pizzaPie() && large) {
-    return 20;
+  if(this.size === small) {
+    this.cost += 10;
+  } else if (this.size === medium) {
+    this.cost += 15;
+  } else if (this.size === large) {
+    this.cost += 20;
   }
+  return this.cost;
 };
 
 //User Interface Logic
-$(document).ready(function(){
-  $("#form-one").submit(function(event){
+$(document).ready(function() {
+  $(".form-one").submit(function(event){
     event.preventDefault();
-  const 
-  }
-}
+  const size = $("input:radio[name=size]:checked").val;
+  const toppings = [];
+  
+  const pizza = new Pizza(toppings, size);
+  pizza.getPrice();
 
-
-//Pizza.prototype.selectPizza = function() {
-  //if (this.selectPizza = pineapple,["small" || "medium" || "large"]) {
-    //this.choice = true;
-  //} 
-//}
-
-//let fruityPie = new Pizza ("pineapple", ["small", "medium", "large"]);
-//let saltyPie = new Pizza ("olives", ["small", "medium", "large"]);
-//let spicyPie = new Pizza ("jalapeño", ["small", "medium","large"])
-
-
-
-
-
-// User Interface Logic
+  $("h4").html(pizzaCost);
+  $("#displayTotal").show();
+  });
+})

@@ -3,37 +3,34 @@
 <head>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
   <title>Pizza Party</title>
 </head>
 <body>
   <div class="container">
-    <form id="form-one">
+  <div class="jumbotron">
+    <h1>Welcome to the Pizza Party Factory!</h1>
+  </div>
+    
       <div class="form-group">
-        <label for="pizzaType">Select Your Pizza Toppings</label>
-        <select class="form-control" id="selectPizza">
-          <option>Pineapple</option>
-          <option>Olive</option>
-          <option>Jalepeno</option>
-          </select>
+        <p>Select Your Pizza Toppings</p>
+          <input type="checkbox" name="topping" value="pineapple"> Pineapple<br>
+          <input type="checkbox" name="topping" value="olive"> Olive<br>
+          <input type="checkbox" name="topping" value="jalapeño"> Jalapeño<br>
     </div>
   <div class="form-group">
-    <label for="pizzaSize">Select Your Size</label>
-    <select class="form-control" id="selectDimensions">
-      <option>Small</option>
-      <option>Medium</option>
-      <option>Large</option>
-    </select>
+    <p>Select Your Size</p>
+    <input type="checkbox" name="size" value="small"> Small<br>
+    <input type="checkbox" name="size" value="medium"> Medium<br>
+    <input type="checkbox" name="size" value="large"> Large<br>
   </div>
-  <button type="submit" class="btn btn-dark">submit</button>
+  <button type="submit" class="btn btn-danger">Order</button>
 </form>
-  <div id="pizzaCost">
-
-  </div>
-
+    <h4><b>Your order total is:</b></h4>
+  <span id="displayTotal">
+        <p></p>
+      </span>  
+    </div>
   </body>
 </html>
