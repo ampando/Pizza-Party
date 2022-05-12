@@ -17,33 +17,22 @@
           <input type="checkbox" name="topping" value="pineapple"> Pineapple<br>
           <input type="checkbox" name="topping" value="olive"> Olive<br>
           <input type="checkbox" name="topping" value="jalapeño"> Jalapeño<br>
-        </div>
-  <form id="form">
-    <div class="form-group">
-          <p><h2>Select Your Size:</h2></p>
-          <input type="checkbox" name="size" value="small"> Small<br>
-          <input type="checkbox" name="size" value="medium"> Medium<br>
-          <input type="checkbox" name="size" value="large"> Large<br>
-          </div>  
-    </div>
-  
-    <button type="submit" class="btn btn-dark" id="order">Order</button>  
+
+    <label for="select-size"><h2>Select your size:</h2></label>
+    <select name="size" id="select-size">
+      <option value="">--Please choose an option--</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+      </select>
 </div>
-</form>
+    <button type="submit" class="btn btn-dark" id="order">Order</button> 
 <div id="order-details">
-    <h4>Your order total is:</h4>
+    <h4>Your current order is:</h4>
     <p><span class="size-choice"></span></p>
     <p><span class="topping-choice"></span></p>
-    <p>Order total: $<span class="order-total"></span>.00</p>
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Pay this amount:</h2>
-        <ul class="unstyled">
-
-        </ul>
-      </div>
-  </div>
-</div>
+    <p>Order total: $<span class="order-total"></span>.00</p>  
+</form>  
 </div>
   </body>
 </html>
