@@ -8,7 +8,7 @@ function PizzaParty(toppings, size,) {
   };
 
 function selectPizza(toppings) {
-  return toppings.map(function (pizzaPie) {
+  return toppings.sort(function (pizzaPie) {
     pizzaPie.type;
   });
 }
@@ -17,14 +17,14 @@ let toppings = [{type:'pineapple'}, {type: 'olive'}, {type: 'jalapeño'}];
 let type = selectPizza(toppings);
 
 function selectDimensions(size) {
-  return size.map(function (width) {
+  return size.sort(function (width) {
   width.ofPie;
   });
 }
 let size = [{type: 'small'}, {type: 'medium'}, {type: 'large'}];
 let ofPie = selectDimensions(size);
 
-/*pizzaParty.prototype.sizeCost = function() {
+PizzaParty.prototype.sizeCost = function() {
   if(this.size === small) {
     this.cost += 10;
   } else if (this.size === medium) {
@@ -32,38 +32,30 @@ let ofPie = selectDimensions(size);
   } else if (this.size === large) {
     this.cost += 20;
   }
-  return this.cost;
-};*/
-
-pizzaParty.prototype.pizzaCost = function() {
-  if(this.sizeCost() === "pineapple" && small) {
-    return 10;
-  } else if (this.sizeCost() === "olive" && medium) {
-    return 15;
-  } else if (this.sizeCost() === "jalapeño" && large) {
-    return 20;
-  }
 };
+
 
 //User Interface Logic
 
-/*$(document).ready(function() {
-  $("#formOne").submit(function(event){
+$(document).ready(function() {
+  $("form#form-one").submit(function(event){
     event.preventDefault();
-  const size = $("input:radio[name=size]:checked").val;
-  const toppings = $("input:radio[name=toppings]:checked").val;
-  });
-});*/
-  //const pizza = new Pizza(toppings, size);
   
-  const form = document.getElementById("form");
-  form.addEventListener("submit",(e) => {
-    e.preventDefault();
+  let selectedToppings = []
+  $("input:checkbox[name=form-one-input]:checked").each(function() {
+    const formOne = $(this).val();
+    selectedToppings.push(formOne);
   });
+  const selectedSize = $("input:checkbox[name=size]:checked").val();
+  let selectedPizza = new Pizza(selectedToppings, selectedSize);
+  let selectedPizzaCost = selectedPizza.pizzaCost();
   
-  /*$(document).ready(function() {
-  $(".form").submit(function(event) {
-    event.preventDefault();
-    $("#displayTotal").show();
-    });
-  });*/
+  $("#order-details").show();
+  $("button#order").click(function() {
+    $("ul").prepend("<li>20!</li>");
+  let viewToppings = selectedToppings.join(",");  
+  $(".size-choice").html(selectedSize);
+  $(".topping-choice").html(viewToppings);
+  $(".order-total").html(selectedPizzaCost);
+  });
+});
