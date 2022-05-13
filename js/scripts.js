@@ -6,7 +6,12 @@ function PizzaParty(toppings, size) {
   };
 
 PizzaParty.prototype.sizeCost = function() {
-  console.log(PizzaParty)
+  //console.log(PizzaParty)
+  if(this.size === "small") {
+    this.cost += 10
+  }
+  console.log(this.cost) 
+  return this.cost
 };
 
 
