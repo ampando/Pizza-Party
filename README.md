@@ -2,10 +2,10 @@ This website allows a user to select their pizza type: including size, toppings 
 
 Describe: (PizzaParty);
 
-Test: It should return a PizzaParty object with the properties of toppings, cost and size.
+Test: It should return a PizzaParty object with the properties of toppings, and size.
 Code: Const PizzaParty
 Expected Output: this.toppings = toppings;
-this.size = size; this.cost = 0; 
+this.size = size; 
 
 Test: It should return a sizeCost prototype
 Input: selectDimensions(size)
@@ -16,19 +16,19 @@ Input:
 Expected Output: 
 
 
-SETUP and INSTALLATION REQUIREMENTS
+### SETUP and INSTALLATION REQUIREMENTS
 
-Pizza Party 
-By Adrienne Matosich
+# Pizza Party 
+### By Adrienne Matosich
 
-Technologies Used
+## Technologies Used
 * HTML
 * CSS
 * Bootstrap
 * jQuery
 * JavaScript
 
-Setup/Installation Requirements
+## Setup/Installation Requirements
 Open by downloading:
 
 Download the repository onto your computer
@@ -42,13 +42,13 @@ Navigate into the 'My-Portfolio' directory using cd My-Portfolio
 Open in Visual Studio code using 'code .' command
 Open index.html in Chrome or preferred browser: 'open index.html
 
-Known Bugs
+## Known Bugs
 Unable to return cost value with submit button. 
 
 License:
 MIT
 
-Support and Contact Details:
+#### Support and Contact Details:
 
 For questions or concerns please contact Adrienne Matosich at amatosich@mgmail.com
 
