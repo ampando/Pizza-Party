@@ -1,12 +1,13 @@
 This website allows a user to select their pizza type: including size, toppings and cost. Once selected it will return the total cost of their selection based on which combination they chose. 
 
-Describe: (selectPizza);
+Describe: (PizzaParty);
 
-Test: It should return an array of pizza toppings.
-Input: selectPizza(toppings)
-Expected Output: 'pineapple,' 'olive', 'jalapeño'
+Test: It should return a PizzaParty object with the properties of toppings, cost and size.
+Code: Const PizzaParty
+Expected Output: this.toppings = toppings;
+this.size = size; this.cost = 0; 
 
-Test: It should return an array of pizza size options.
+Test: It should return a sizeCost prototype
 Input: selectDimensions(size)
  Expected Output: 'small', 'medium', 'large'
 
@@ -19,12 +20,13 @@ SETUP and INSTALLATION REQUIREMENTS
 
 Pizza Party 
 By Adrienne Matosich
+
 Technologies Used
-HTML
-CSS
-Bootstrap
-jQuery
-JavaScript
+* HTML
+* CSS
+* Bootstrap
+* jQuery
+* JavaScript
 
 Setup/Installation Requirements
 Open by downloading:

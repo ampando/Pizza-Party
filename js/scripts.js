@@ -1,5 +1,5 @@
 // Business Logic
-function PizzaParty(toppings, size) {
+function PizzaParty(toppings, _cost, size) { 
     this.toppings = toppings;
     this.size = size; 
     this.cost = 0;
@@ -19,24 +19,26 @@ PizzaParty.prototype.sizeCost = function() {
 //User Interface Logic
 
 $(document).ready(function() {
-  $("form#form-one").submit(function(event){
-    event.preventDefault();
+  $( "order").click(function(){ //added this line most recently. Thinking maybe I was missing my button jQuery?? 
+    $("form#form-one").submit(function(event){ 
+      event.preventDefault();
+  });
   
   let selectedToppings = []
   $("input:checkbox[name=topping-input]:checked").each(function() {
     const formOne = $(this).val();
-    selectedToppings.push(formOne);
+    selectedToppings.push(form-one);
   });
   
   const selectedSize = $('#select-size');
   let selectedPizza = new PizzaParty(selectedToppings, selectedSize);
   selectedPizza.pizzaCost();
   
-  $("#order-details").show();
+  $("#order-details").show(); //at this point I don't even need to display order details. Just looking for a price. 
   let viewToppings = selectedToppings.join(",");  
   $(".size-choice").html(selectedSize);
-  $(".topping-choice").html(viewToppings);
-  $(".order-total").html(selectedPizzaCost);
+  $(".topping-choice").html(selectedToppings);
+  $(".order-total").html(selectedPizza);
   });
   });
 
