@@ -9,7 +9,9 @@ PizzaParty.prototype.sizeCost = function() {
   //console.log(PizzaParty)
   if(this.size === "small") {
     this.cost += 10
-  }
+  } else if (this.size === "medium"){
+    this.cost += 15
+  }  
   console.log(this.cost) 
   return this.cost
 };
